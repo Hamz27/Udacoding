@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('nim');
             $table->string('nama');
-            $table->enum('jk',['L','P']);
+            $table->enum('jk',['Laki-laki','Perempuan']);
             $table->date('tgllahir');
             $table->string('alamat')->nullable();
             $table->string('lastauthor_id');

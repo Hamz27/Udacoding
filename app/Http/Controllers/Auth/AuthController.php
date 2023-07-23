@@ -48,14 +48,15 @@ class AuthController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'Email not found'
+            'email' => 'Your email might be incorrect or doesnt exist',
+            'password' => 'Your password might be incorrect or doesnt exist'
         ])->onlyInput('email');
     }
 
     public function dashboard()
     {
         if (Auth::check()) {
-            return view('dashboard.siswa.index');
+            return view('dashboard.index');
         }
 
         return redirect()->route('login');

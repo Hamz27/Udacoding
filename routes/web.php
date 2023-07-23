@@ -21,16 +21,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard.siswa.index');
-// });
-
-// Route::get('/admin', function () {
-//     return view('dashboard.admin.index');
-// });
-
 use App\Http\Controllers\Auth\AuthController;
-
 Route::controller(AuthController::class)->group(function () {
     Route::get('/login', 'login')->name('login');
     Route::post('/store', 'store')->name('store');
@@ -38,3 +29,11 @@ Route::controller(AuthController::class)->group(function () {
     Route::get('/dashboard', 'dashboard')->name('dashboard');
     Route::post('/logout', 'logout')->name('logout');
 });
+
+use App\Http\Controllers\MahasiswaController;
+Route::get('siswa', [MahasiswaController::class, 'index']);
+Route::get('form-siswa', [MahasiswaController::class, 'create']);
+Route::post('store-siswa', [MahasiswaController::class, 'store']);
+Route::delete('/siswa/destroy/{id}', [MahasiswaController::class, 'destroy'])->name('siswa.destroy');
+Route::get('/siswa/edit/{id}', [MahasiswaController::class, 'edit'])->name('siswa.edit');
+Route::post('/siswa/update/{id}', [MahasiswaController::class, 'update'])->name('siswa.update');
