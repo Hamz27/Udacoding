@@ -1,0 +1,86 @@
+.bglanding {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    transition: 0.5s all ease-in-out;
+}
+
+.bglanding:hover {
+    transform: scale(1.5);
+}
+
+.landing {
+    width: 70%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--bs-dark);
+    transform: skewX(30deg);
+    top: 0;
+    left: -20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+.imgbg {
+    height: 100%;
+    float: right;
+}
+
+.divland {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    position: fixed;
+    padding-left: 40px;
+}
+
+.tombol{
+    width: 100px;
+    margin-right: 10px;
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 920px) {
+    .landing {
+        width: 90%;
+        transform: skewX(20deg);
+    }
+
+    .bglanding {
+        background-image: url(../img/building.jfif);
+        background-size: cover;
+    }
+
+    .imgbg {
+        display: none;
+    }
+
+    .divland{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .landing {
+        width: 80%;
+        transform: skewX(10deg);
+    }
+
+    .bglanding {
+        background-image: url(../img/building.jfif);
+        background-size: cover;
+    }
+
+    .imgbg {
+        display: none;
+    }
+
+    .divland{
+        width: 50%;
+    }
+}

@@ -1,0 +1,75 @@
+@extends('master.app')
+@section('siswaActive','active')
+@section('content')
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h4 class="m-0 font-weight-bold text-primary">Tabel Siswa</h4>
+    </div>
+    <div class="card-body table-responsive">
+        <table class="table table-bordered" id="myTable" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Jumlah</th>
+                    <th>Tanggal</th>
+                    <th>Penghutang</th>
+                    <th>Alasan</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>No</th>
+                    <th>Jumlah</th>
+                    <th>Tanggal</th>
+                    <th>Penghutang</th>
+                    <th>Alasan</th>
+                    <th>Action</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>No</td>
+                    <td>Jumlah</td>
+                    <td>Tanggal</td>
+                    <td>Penghutang</td>
+                    <td>Alasan</td>
+                    <td>Action</td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>Jumlah</td>
+                    <td>Tanggal</td>
+                    <td>Penghutang</td>
+                    <td>Alasan</td>
+                    <td>Action</td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>Jumlah</td>
+                    <td>Tanggal</td>
+                    <td>Penghutang</td>
+                    <td>Alasan</td>
+                    <td>Action</td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>Jumlah</td>
+                    <td>Tanggal</td>
+                    <td>Penghutang</td>
+                    <td>Alasan</td>
+                    <td>Action</td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>Jumlah</td>
+                    <td>Tanggal</td>
+                    <td>Penghutang</td>
+                    <td>Alasan</td>
+                    <td>Action</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+@endsection
