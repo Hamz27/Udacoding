@@ -31,7 +31,7 @@
             </div>
 
             <p class="text-light fs-4" style="margin-top: 30px;">Demo & Logic Project</p>
-            <iframe class="vid" src="https://www.youtube.com/embed/wAZdRs2lDIQ?autoplay=1&mute=1"></iframe>
+            <iframe class="vid" src="https://www.youtube.com/embed/tJ5XQyKNm7Q?autoplay=1&mute=1"></iframe>
 
             <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
                 <div class="offcanvas-header">
