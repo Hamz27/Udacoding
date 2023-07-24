@@ -37,3 +37,6 @@ Route::post('store-siswa', [MahasiswaController::class, 'store']);
 Route::delete('/siswa/destroy/{id}', [MahasiswaController::class, 'destroy'])->name('siswa.destroy');
 Route::get('/siswa/edit/{id}', [MahasiswaController::class, 'edit'])->name('siswa.edit');
 Route::post('/siswa/update/{id}', [MahasiswaController::class, 'update'])->name('siswa.update');
+
+use App\Http\Controllers\AdminController;
+Route::get('admin', [AdminController::class, 'index']);

@@ -17,6 +17,7 @@
             <thead>
                 <tr>
                     <th>No</th>
+                    <th>ID</th>
                     <th>NIM</th>
                     <th>Nama</th>
                     <th>Jenis Kelamin</th>
@@ -28,6 +29,7 @@
             <tfoot>
                 <tr>
                     <th>No</th>
+                    <th>ID</th>
                     <th>NIM</th>
                     <th>Nama</th>
                     <th>Jenis Kelamin</th>
@@ -41,6 +43,7 @@
                 @foreach($siswas as $sis)
                 <tr>
                     <td>{{ $no++ }}</td>
+                    <th>{{ $sis->id }}</th>
                     <td>{{ $sis->nim }}</td>
                     <td>{{ $sis->nama }}</td>
                     <td>{{ $sis->jk }}</td>

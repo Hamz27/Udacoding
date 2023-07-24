@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\DB;
+
 class MahasiswaController extends Controller
 {
     /**
@@ -47,6 +49,14 @@ class MahasiswaController extends Controller
         $siswa->lastauthor_id = $request->user()->id;
 
         $siswa->save();
+
+        // input admin history
+        DB::table('adminhistory')->insert([
+            'user_id' => $request->user()->id,
+            'siswa_id' => $siswa->id,
+            'action' => 'create',
+            'created_at' => now()
+        ]);
 
         return redirect('siswa')->with('status', 'Form Data Has Been validated and insert');
     }
@@ -91,16 +101,32 @@ class MahasiswaController extends Controller
 
         $siswa->update();
 
+        // input admin history
+        DB::table('adminhistory')->insert([
+            'user_id' => $request->user()->id,
+            'siswa_id' => $request->id,
+            'action' => 'update',
+            'created_at' => now()
+        ]);
+
         return redirect('siswa')->with('status', 'Form Data Has Been validated and updated');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request, string $id)
     {
         Mahasiswa::find($id)->delete();
 
-        return redirect('siswa')->with('status', 'Form Data Has Been validated and updated');
+        // input admin history
+        DB::table('adminhistory')->insert([
+            'user_id' => $request->user()->id,
+            'siswa_id' => $request->id,
+            'action' => 'delete',
+            'created_at' => now()
+        ]);
+
+        return redirect('siswa')->with('status', 'Form Data Has Been deleted');
     }
 }
